@@ -1,9 +1,17 @@
-import React from "react";
+.projectsBlock {
+    height: 100vh;
+    background-color: #d5b0e8;
+}
 
-export const Projects = () => {
-    return (
-        <div className={s.projectBlock}>
+.projectContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+}
 
-        </div>
-    )
+.projectsWrapper {
+    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
 }

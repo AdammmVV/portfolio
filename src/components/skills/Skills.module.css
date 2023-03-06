@@ -1,10 +1,22 @@
-import React from "react";
+.skillsBlock {
+    height: 100vh;
+    background-color: #aefda4;
+}
 
-export const Skills = () => {
-    return (
-        <div>
+.container {
+    flex-direction: column;
+    justify-content: flex-start;
+}
 
-        </div>
-    )
+.skillsTitle {
+    background-color: #ababab;
+    border: 1px solid;
+}
 
+.skillWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: 1px solid;
 }

@@ -1,9 +1,21 @@
-import React from "react";
+.footerBlock {
+    height: 30vh;
+    background-color: #c4fabf;
+}
 
-export const Footer = () => {
-    return (
-        <div className={s.footerBlock}>
+.container {
+    flex-direction: column;
+}
 
-        </div>
-    )
+.messengersWrapper {
+    border: 1px solid;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.messenger {
+    background-color: #ababab;
+    width: 40px;
+    height: 40px;
 }

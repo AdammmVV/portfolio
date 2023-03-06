@@ -1,16 +1,14 @@
-import React from "react";
+.main {
+    height: 100vh;
+    background-color: #e796bb;
+}
 
-export const Main = () => {
-    return (
-        <div className={s.main}>
-            <div>
-                Привет!/n
-                Меня зовут Валерий Адамчук./n
-                Я front-end разработчик
-            </div>
-            <div>
+.description {
+    background-color: #ababab;
+}
 
-            </div>
-        </div>
-    )
+.mainPhoto {
+    background-color: #ababab;
+    width: 300px;
+    height: 400px;
 }

@@ -1,9 +1,29 @@
-import React from "react";
+.formBlock {
+    height: 100vh;
+    background-color: #e3b4c5;
+}
 
-export const Form = () => {
-    return (
-        <div className={s.formBlock}>
+.container {
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-        </div>
-    )
+.formWrapper {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid;
+}
+
+.formWrapper input {
+    background-color: #ababab;
+    border: none;
+    padding: 5px;
+}
+
+.formWrapper textarea {
+    height: 150px;
+    background-color: #ababab;
+    border: none;
 }

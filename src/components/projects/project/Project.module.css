@@ -1,16 +1,21 @@
-import s from "../Projects.module.css";
-import React from "react";
+.itemProject {
+    width: 250px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-export const Project = () => {
-    return (
-        <div>
-            <div className={s.imgProject}>
-                <button>Смотреть</button>
-            </div>
-            <div className={s.description}>
-                <h6>title</h6>
-                <span>Описание</span>
-            </div>
-        </div>
-    )
+.imgProject {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ababab;
+    width: 250px;
+    height: 250px;
+}
+
+.description {
+    width: 100%;
+    text-align: center;
 }

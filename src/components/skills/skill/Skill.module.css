@@ -1,18 +1,22 @@
-import s from "../Skills.module.css";
-import React from "react";
+.skillItem {
+    background-color: white;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-export const Skill = () => {
-    return (
-        <div className={s.skillItem}>
-            <div className={s.iconItem}>
+.iconItem {
+    background-color: #ababab;
+    width: 50px;
+    height: 50px;
+}
 
-            </div>
-            <div className={s.titleIcon}>
+.titleIcon {
 
-            </div>
-            <div className={s.description}>
+}
 
-            </div>
-        </div>
-    )
+.description {
+    border: 1px solid blue;
+
 }

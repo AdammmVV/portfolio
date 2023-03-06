@@ -1,0 +1,12 @@
+import React from "react";
+
+export const Nav = () => {
+    return (
+        <div>
+            <a href="">Главная</a>
+            <a href="">Скиллы</a>
+            <a href="">Проекты</a>
+            <a href="">Контакты</a>
+        </div>
+    )
+}

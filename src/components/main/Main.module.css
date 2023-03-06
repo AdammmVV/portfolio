@@ -1,0 +1,16 @@
+import React from "react";
+
+export const Main = () => {
+    return (
+        <div className={s.main}>
+            <div>
+                Привет!/n
+                Меня зовут Валерий Адамчук./n
+                Я front-end разработчик
+            </div>
+            <div>
+
+            </div>
+        </div>
+    )
+}

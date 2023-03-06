@@ -1,3 +1,9 @@
 .distantWorkBlock {
+    height: 100vh;
+    background-color: #fde8a4;
+}
 
+.container {
+    flex-direction: column;
+    justify-content: center;
 }

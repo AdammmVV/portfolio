@@ -1,12 +1,6 @@
-import React from "react";
-
-export const Nav = () => {
-    return (
-        <div>
-            <a href="">Главная</a>
-            <a href="">Скиллы</a>
-            <a href="">Проекты</a>
-            <a href="">Контакты</a>
-        </div>
-    )
+.nav {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid;
+    width: 400px;
 }

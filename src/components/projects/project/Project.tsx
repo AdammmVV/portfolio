@@ -4,7 +4,7 @@ import React from "react";
 export const Project = () => {
     return (
         <div className={s.itemProject}>
-            <div className={s.imgProject}>
+            <div className={s.imgContainer}>
                 <button>Смотреть</button>
             </div>
             <div className={s.description}>

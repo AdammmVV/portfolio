@@ -1,6 +1,6 @@
 .formBlock {
-    height: 100vh;
     background-color: #e3b4c5;
+    padding: 20px 0;
 }
 
 .container {
@@ -9,7 +9,7 @@
 }
 
 .formWrapper {
-    width: 300px;
+    width: 280px;
     display: flex;
     flex-direction: column;
     gap: 5px;

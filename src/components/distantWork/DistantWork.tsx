@@ -1,13 +1,15 @@
 import React from "react";
-import s from "./DistantWork.module.css"
+import s from "./DistantWork.module.scss"
 import stylesContainer from '../../common/Container.module.css'
+import {SuperButton} from "../../common/components/button/SuperButton";
+import background from './../../assets/image/BacgroundImage/2.avif'
 
 export const DistantWork = () => {
     return (
-        <div className={s.distantWorkBlock}>
+        <div className={s.distantWorkBlock} style={{backgroundImage: `url(${background})`}}>
             <div className={`${stylesContainer.container} ${s.container}`}>
-                <h3>Рассматриваю варианты удаленной работы</h3>
-                <button>Нанять меня</button>
+                <h6>Considering remote work options</h6>
+                <SuperButton name={'Hire Me'} variant={'basic'} />
             </div>
         </div>
     )

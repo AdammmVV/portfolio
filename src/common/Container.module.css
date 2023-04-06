@@ -5,6 +5,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid;
     flex-wrap: wrap;
+}
+
+@media (min-width: 1700px) {
+    .container {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1016px) {
+    .container {
+        width: 90%;
+        justify-content: center;
+
+    }
 }

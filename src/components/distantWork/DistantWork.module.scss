@@ -1,0 +1,30 @@
+.distantWorkBlock {
+    position: relative;
+    padding: 100px 0;
+    background-size: cover;
+    background-position: center;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: #212529;
+        opacity: 0.7;
+        z-index: 2;
+    }
+    .container {
+        position: relative;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        h6 {
+            font-size: 24px;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    }
+}
+

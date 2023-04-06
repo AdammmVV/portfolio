@@ -5,7 +5,7 @@ import {Main} from "./components/main/Main";
 import {Skills} from "./components/skills/Skills";
 import {Projects} from "./components/projects/Projects";
 import {DistantWork} from "./components/distantWork/DistantWork";
-import {Form} from "./components/form/Form";
+import {Contact} from "./components/contact/Contact";
 import {Footer} from "./components/footer/Footer";
 
 export const App = () => {
@@ -17,7 +17,7 @@ export const App = () => {
             <Skills/>
             <Projects/>
             <DistantWork />
-            <Form />
+            <Contact />
 
             <Footer />
         </div>

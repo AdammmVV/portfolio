@@ -1,5 +1,5 @@
 import React from "react";
-import s from './Main.module.css'
+import s from './Main.module.scss'
 import stylesContainer from '../../common/Container.module.css'
 import mainPhoto from './../../assets/image/avaMain.jpg'
 import {SuperButton} from "../../common/components/button/SuperButton";
@@ -25,8 +25,7 @@ export const Main = () => {
                                      icon={'arrowCircleDown'}/>
                     </div>
                 </div>
-                <div className={s.mainPhoto} style={photo}>
-                </div>
+                <div className={s.mainPhoto} style={photo} />
             </div>
             <div className={s.arrow}/>
         </div>

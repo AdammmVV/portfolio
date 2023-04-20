@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./Skill.module.css";
+import s from "./Skill.module.scss";
 
 type SkillPropsType = {
     icon: { backgroundImage: string }
@@ -16,8 +16,7 @@ export const Skill: React.FC<SkillPropsType> = (
 ) => {
     return (
         <div className={s.skillItem}>
-            <div className={s.iconItem} style={icon}>
-            </div>
+            <div className={s.iconItem} style={icon} />
             <div className={s.skillTitle}>
                 <p>{skillTitle}</p>
             </div>

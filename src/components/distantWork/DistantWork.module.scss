@@ -1,3 +1,5 @@
+@import './../../common/styles/sass/variables';
+
 .distantWorkBlock {
     position: relative;
     padding: 100px 0;
@@ -10,7 +12,7 @@
         bottom: 0;
         right: 0;
         left: 0;
-        background-color: #212529;
+        background-color: $textColor;
         opacity: 0.7;
         z-index: 2;
     }
@@ -21,7 +23,7 @@
         justify-content: center;
         h6 {
             font-size: 24px;
-            color: #fff;
+            color: $bgPrimary;
             text-align: center;
             margin-bottom: 30px;
         }

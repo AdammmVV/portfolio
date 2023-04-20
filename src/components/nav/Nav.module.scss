@@ -1,6 +1,8 @@
+@import './../../common/styles/sass/variables';
+@import './../../common/styles/sass/mixins';
+
 .nav {
-  display: flex;
-  justify-content: space-between;
+  @include displayFlex(space-between);
   align-items: center;
   width: 400px;
 
@@ -8,34 +10,26 @@
   position: relative;
 
   a {
-    position: relative;
-    align-items: center;
     display: flex;
-    color: #252b33;
+    align-items: center;
+    position: relative;
+    color: $textColor;
     height: 70px;
     text-decoration: none;
 
     &:before {
-      content: '';
+      @include pseudoElement(20px, 50%, $primaryColor);
       transition: all 0.2s ease-out;
-      position: absolute;
-      background-color: #ffc107;
       transform: translate(-50%, 50%);
       width: 0;
       height: 3px;
-      bottom: 20px;
-      left: 50%;
     }
 
     &:hover::before {
-      content: '';
-      position: absolute;
-      background-color: #ffc107;
-      left: 50%;
+      @include pseudoElement(20px, 50%, $primaryColor);
       transform: translate(-50%, 50%);
       width: 100%;
       height: 3px;
-      bottom: 20px;
     }
   }
 }

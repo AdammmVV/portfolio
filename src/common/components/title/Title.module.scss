@@ -1,0 +1,40 @@
+@import './../../../common/styles/sass/variables';
+@import './../../../common/styles/sass/mixins';
+
+.title {
+  @include textMain(400, 46px, none);
+  @include displayFlex(center);
+  align-items: center;
+  font-family: Poppins, sans-serif;
+  text-align: center;
+  color: $textColor;
+  position: relative;
+  min-width: 100px;
+  margin-bottom: 5rem;
+
+  h2 {
+    @include textMain(600, 100px);
+    color: #dee3e4;
+    align-self: center;
+    width: 100%;
+    opacity: 0.4;
+    @media (max-width: 600px) {
+      font-size: 60px;
+    }
+  }
+
+  p {
+    position: absolute;
+    font-weight: 600;
+    font-size: 28px;
+    color: $textColor;
+
+    &::before {
+      @include pseudoElement(-5px, 50%, #ffc107);
+      width: 80px;
+      height: 3px;
+      z-index: 100;
+      transform: translate(-50%, 50%);
+    }
+  }
+}

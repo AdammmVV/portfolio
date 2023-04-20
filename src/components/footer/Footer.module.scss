@@ -1,7 +1,9 @@
+@import './../../common/styles/sass/variables';
+
 .footerBlock {
   padding: 60px 0;
-  background-color: #111418;
-  color: #fff;
+  background-color: $textColor;
+  color: $bgPrimary;
   text-align: center;
 
   .container {

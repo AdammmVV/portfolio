@@ -1,0 +1,29 @@
+@import './../../../common/styles/sass/variables';
+@import './../../../common/styles/sass/mixins';
+
+.skillItem {
+  @include items($bgSecondary);
+  padding: 20px;
+
+  .iconItem {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+
+    .skillTitle {
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .skillDescription {
+    }
+  }
+}
+
+
+
+
+

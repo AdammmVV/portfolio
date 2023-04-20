@@ -1,15 +1,15 @@
+@import './../../common/styles/sass/variables';
+@import './../../common/styles/sass/mixins';
+
 .projectsBlock {
-    padding: 60px 0;
-    background-color: rgb(248,249,250);
+    @include positionForBlock($bgSecondary);
     .containerProjects {
-        display: flex;
-        justify-content: center;
+        @include displayFlex(center);
         align-items: center;
     }
     .projectsWrapper {
-        display: flex;
+        @include displayFlex(space-around);
         gap: 25px;
-        justify-content: space-around;
         flex-wrap: wrap;
         width: 100%;
     }

@@ -1,0 +1,22 @@
+@import './../../common/styles/sass/variables';
+@import './../../common/styles/sass/mixins';
+
+.skillsBlock {
+  @include positionForBlock($bgPrimary);
+
+  .container {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .skillWrapper {
+      padding: 0 15px;
+      width: 100%;
+      @include displayFlex(center);
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+  }
+}
+
+
+

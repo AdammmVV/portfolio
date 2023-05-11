@@ -4,7 +4,7 @@ import stylesContainer from '../../common/Container.module.css'
 import {Skill} from "./skill/Skill";
 import {Title} from "../../common/components/title/Title";
 import reactIcon from './../../assets/image/react-svgrepo-com.svg'
-import reduxtIcon from './../../assets/image/redux-svgrepo-com.svg'
+import reduxIcon from './../../assets/image/redux-svgrepo-com.svg'
 import typeScriptIcon from './../../assets/image/typescript-svgrepo-com.svg'
 import javaScriptIcon from './../../assets/image/javascript-svgrepo-com.svg'
 import HTMLIcon from './../../assets/image/html-svgrepo-com.svg'
@@ -16,13 +16,14 @@ import gitIcon from './../../assets/image/git-svgrepo-com.svg'
 import UnitTestIcon from './../../assets/image/jest-svgrepo-com.svg'
 import StorybookIcon from './../../assets/image/storybook-icon-svgrepo-com.svg'
 import PostmanIcon from './../../assets/image/postman-icon-svgrepo-com.svg'
+import {Fade} from "react-awesome-reveal";
 
 
 export const Skills = () => {
 
     const skills = [
         {title: 'React', icon: {backgroundImage: `url(${reactIcon})`}},
-        {title: 'Redux', icon: {backgroundImage: `url(${reduxtIcon})`}},
+        {title: 'Redux', icon: {backgroundImage: `url(${reduxIcon})`}},
         {title: 'TypeScript', icon: {backgroundImage: `url(${typeScriptIcon})`}},
         {title: 'JavaScript', icon: {backgroundImage: `url(${javaScriptIcon})`}},
         {title: 'HTML', icon: {backgroundImage: `url(${HTMLIcon})`}},
@@ -46,9 +47,11 @@ export const Skills = () => {
         <div className={s.skillsBlock} id={'skills'}>
             <div className={`${stylesContainer.container} ${s.container}`}>
                 <Title mainTitle={'Skills'} title={'My Skills'}/>
+                <Fade duration={1500} triggerOnce>
                 <div className={s.skillWrapper}>
                     {skillMap}
                 </div>
+                </Fade>
             </div>
         </div>
     )

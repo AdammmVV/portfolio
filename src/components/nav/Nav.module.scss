@@ -2,7 +2,7 @@
 @import './../../common/styles/sass/mixins';
 
 .navWrapper {
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     display: none;
   }
   .nav {

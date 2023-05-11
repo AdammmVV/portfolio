@@ -3,7 +3,7 @@
 @import './../nav/Nav.module';
 
 .burgerNavWrapper {
-  @media (min-width: 400px) {
+  @media (min-width: 500px) {
     display: none;
   }
   .btnWrapper {

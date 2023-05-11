@@ -18,7 +18,6 @@ import StorybookIcon from './../../assets/image/storybook-icon-svgrepo-com.svg'
 import PostmanIcon from './../../assets/image/postman-icon-svgrepo-com.svg'
 import {Fade} from "react-awesome-reveal";
 
-
 export const Skills = () => {
 
     const skills = [

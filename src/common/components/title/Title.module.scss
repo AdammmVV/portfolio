@@ -1,7 +1,7 @@
 @import './../../../common/styles/sass/variables';
 @import './../../../common/styles/sass/mixins';
 
-.title {
+.titleWrapper {
   @include textMain(400, 46px, none);
   @include displayFlex(center);
   align-items: center;
@@ -12,7 +12,7 @@
   min-width: 100px;
   margin-bottom: 5rem;
 
-  h2 {
+  .mainTitle h2 {
     @include textMain(600, 100px);
     color: #dee3e4;
     align-self: center;
@@ -23,7 +23,7 @@
     }
   }
 
-  p {
+  .title {
     position: absolute;
     font-weight: 600;
     font-size: 28px;

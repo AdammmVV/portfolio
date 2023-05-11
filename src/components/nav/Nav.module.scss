@@ -1,35 +1,24 @@
 @import './../../common/styles/sass/variables';
 @import './../../common/styles/sass/mixins';
 
-.nav {
-  @include displayFlex(space-between);
-  align-items: center;
-  width: 400px;
-
-  margin: 0 1.5em;
-  position: relative;
-
-  a {
-    display: flex;
+.navWrapper {
+  @media (max-width: 400px) {
+    display: none;
+  }
+  .nav {
+    @include displayFlex(space-between);
     align-items: center;
+    width: 400px;
+    margin: 0 1.5em;
     position: relative;
-    color: $textColor;
-    height: 70px;
-    text-decoration: none;
-
-    &:before {
-      @include pseudoElement(20px, 50%, $primaryColor);
-      transition: all 0.2s ease-out;
-      transform: translate(-50%, 50%);
-      width: 0;
-      height: 3px;
-    }
-
-    &:hover::before {
-      @include pseudoElement(20px, 50%, $primaryColor);
-      transform: translate(-50%, 50%);
-      width: 100%;
-      height: 3px;
+    .active {
+      &:before {
+        @include pseudoElement(20px, 50%, $primaryColor);
+        transform: translate(-50%, 50%);
+        width: 100%;
+        height: 3px;
+      }
     }
   }
 }
+

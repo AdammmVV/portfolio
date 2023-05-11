@@ -37,9 +37,7 @@ export const Main = () => {
                     </div>
                 </Slide>
                 <Fade direction={'right'}>
-                    <Tilt options={{max: 5, scale: 1}} className={s.mainPhoto} style={photo}>
-                        <div/>
-                    </Tilt>
+                    <Tilt options={{max: 5, scale: 1}} className={s.mainPhoto} style={photo}/>
                 </Fade>
             </div>
             <div className={s.arrowWrapper}>

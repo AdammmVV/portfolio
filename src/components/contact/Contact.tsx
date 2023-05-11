@@ -2,6 +2,7 @@ import React from "react";
 import s from "./Contact.module.scss"
 import stylesContainer from '../../common/Container.module.css'
 import {SuperButton} from "../../common/components/button/SuperButton";
+import {Fade} from "react-awesome-reveal";
 
 
 export const Contact = () => {
@@ -9,6 +10,7 @@ export const Contact = () => {
         <div className={s.formBlock} id={'contact'}>
             <div className={`${stylesContainer.container} ${s.container}`}>
                 <div className={s.formContainer}>
+                    <Fade direction={'left'}>
                     <div className={s.descriptionWrapper}>
                         <h2>ADDRESS:</h2>
                         <p>
@@ -26,6 +28,8 @@ export const Contact = () => {
                             <SuperButton variant={'icon'} icon={'instagram'}/>
                         </div>
                     </div>
+                    </Fade>
+                    <Fade direction={'right'}>
                     <div className={s.formWrapper}>
                         <h2>SEND US A NOTE</h2>
                         <form action="#" className={s.form}>
@@ -42,6 +46,7 @@ export const Contact = () => {
                             </div>
                         </form>
                     </div>
+                    </Fade>
                 </div>
             </div>
         </div>

@@ -9,11 +9,19 @@
   display: flex;
   align-items: center;
 
+  .particle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
   .description {
     @media (max-width: 859px) {
-        @include displayFlex(center);
-        text-align: center;
-        flex-direction: column;
+      @include displayFlex(center);
+      text-align: center;
+      flex-direction: column;
     }
 
     h2 {
@@ -25,13 +33,16 @@
     }
 
     span {
+      &:nth-child(4) {
+        margin-bottom: 16px;
+      }
       font-size: 21px;
       line-height: 1.8;
-      margin-bottom: 16px;
     }
   }
 
   .mainPhoto {
+    z-index: 100;
     background-position: center;
     background-size: cover;
     width: 400px;
@@ -41,18 +52,29 @@
     border: 5px $bgPrimary solid;
   }
 
-  .arrow {
-    position: absolute;
-    bottom: 30px;
-    left: calc(50% - 25px);
-    width: 25px;
-    height: 25px;
-    border-top: 4px solid $textColor;
-    border-right: 4px solid $textColor;
-    margin: 16px 0 0 10px;
-    transform: rotate(135deg);
-    display: inline-block;
+  .arrowWrapper {
+    .arrow {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      border-top: 4px solid $textColor;
+      border-right: 4px solid $textColor;
+      margin: 16px 0 0 10px;
+      transform: rotate(135deg);
+      display: inline-block;
+      animation: arrow 0.8s alternate infinite;
+    }
   }
+
 }
 
-
+@keyframes arrow {
+  from {
+    left: calc(50% - 25px);
+    bottom: 30px;
+  }
+  to {
+    left: calc(50% - 25px);
+    bottom: 15px
+  }
+}

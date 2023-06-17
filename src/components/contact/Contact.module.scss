@@ -23,8 +23,8 @@
       }
 
       .descriptionWrapper {
-        position: relative;
         @include displayFlex(center);
+        position: relative;
         flex-direction: column;
         padding: 30px;
 
@@ -34,7 +34,13 @@
         }
 
         p {
+          display: flex;
+          gap: 15px;
+          align-items: center;
           margin-bottom: 25px;
+          a {
+            margin: 0;
+          }
         }
       }
 

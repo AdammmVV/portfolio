@@ -7,11 +7,14 @@ import telegram from './../../../assets/image/btnIcon/btnMessage/telegram.svg'
 import github from './../../../assets/image/btnIcon/btnMessage/github.svg'
 import gmail from './../../../assets/image/btnIcon/btnMessage/gmail.svg'
 import instagram from './../../../assets/image/btnIcon/btnMessage/instagram.svg'
-
+import location from './../../../assets/image/btnIcon/btnMessage/location.svg'
+import phone from './../../../assets/image/btnIcon/btnMessage/phone.svg'
+import linkedin from './../../../assets/image/btnIcon/btnMessage/linkedin.svg'
 
 type SuperButtonPropsType = {
     name?: string
     variant: 'primary' | 'basic' | 'secondary' | 'link' | 'icon'
+    href?: string
     icon?:
         'arrowCircleDown'
         | 'arrowDown'
@@ -20,6 +23,9 @@ type SuperButtonPropsType = {
         | 'github'
         | 'gmail'
         | 'instagram'
+        | 'location'
+        | 'phone'
+        | 'linkedin'
 }
 
 export const SuperButton: React.FC<SuperButtonPropsType> = (
@@ -27,21 +33,27 @@ export const SuperButton: React.FC<SuperButtonPropsType> = (
         name,
         variant,
         icon,
+        href
     }
 ) => {
 
     let finalClassName = s.button
 
-    if (variant === 'primary') {
-        finalClassName += ' ' + s.btnDefault
-    } else if (variant === 'basic') {
-        finalClassName += ' ' + s.btnBasic
-    } else if (variant === 'secondary') {
-        finalClassName += ' ' + s.btnSecondary
-    } else if (variant === 'link') {
-        finalClassName += ' ' + s.btnLink
-    } else if (variant === 'icon') {
-        finalClassName += ''
+    switch (variant) {
+        case 'primary':
+            finalClassName += ' ' + s.btnDefault
+            break
+        case 'basic':
+            finalClassName += ' ' + s.btnBasic
+            break
+        case 'secondary':
+            finalClassName += ' ' + s.btnSecondary
+            break
+        case 'link':
+            finalClassName += ' ' + s.btnLink
+            break
+        case 'icon':
+            finalClassName += ''
     }
 
     const allIcons = {
@@ -52,10 +64,13 @@ export const SuperButton: React.FC<SuperButtonPropsType> = (
         github,
         gmail,
         instagram,
+        location,
+        phone,
+        linkedin
     }
     const iconForButton = {backgroundImage: `url(${icon && allIcons[icon]})`}
 
-    return <a href="#" className={finalClassName}>
+    return <a href={href} className={finalClassName}>
         {name}
         {variant === 'icon'
             ? <span className={s.btnIcon} style={iconForButton}/>

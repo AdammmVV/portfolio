@@ -1,7 +1,7 @@
 import React from "react";
 import s from './Main.module.scss'
 import stylesContainer from '../../common/Container.module.css'
-import mainPhoto from './../../assets/image/avaMain.jpg'
+import mainPhoto from './../../assets/image/avaMain.avif'
 import {SuperButton} from "../../common/components/button/SuperButton";
 import {Particle} from "../../common/components/particle/Particle";
 import {Slide, Fade} from "react-awesome-reveal"
@@ -29,10 +29,10 @@ export const Main = () => {
                             eraseSpeed={100}/>
                         <div className={s.navigation}>
                             <SuperButton name={'View My Works'}
-                                         variant={'primary'}/>
+                                         variant={'primary'} href={'#projects'}/>
                             <SuperButton name={'Contact Me'}
                                          variant={'link'}
-                                         icon={'arrowCircleDown'}/>
+                                         icon={'arrowCircleDown'} href={'#contact'}/>
                         </div>
                     </div>
                 </Slide>

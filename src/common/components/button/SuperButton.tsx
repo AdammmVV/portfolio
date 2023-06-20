@@ -33,7 +33,7 @@ export const SuperButton: React.FC<SuperButtonPropsType> = (
         name,
         variant,
         icon,
-        href
+        href,
     }
 ) => {
 

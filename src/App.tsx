@@ -7,6 +7,8 @@ import {Projects} from "./components/projects/Projects";
 import {DistantWork} from "./components/distantWork/DistantWork";
 import {Contact} from "./components/contact/Contact";
 import {Footer} from "./components/footer/Footer";
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 export const App = () => {
     return (
@@ -20,6 +22,18 @@ export const App = () => {
             <Contact />
 
             <Footer />
+            <ToastContainer
+                position="bottom-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
         </div>
     );
 }

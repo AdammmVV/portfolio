@@ -1,0 +1,75 @@
+@import './src/common/styles/sass/variables';
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  animation: rotate 1s infinite;
+  height: 50px;
+  width: 50px;
+
+  &:before,
+  &:after {
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 20px;
+    width: 20px;
+  }
+
+  &:before {
+    animation: ball1 1s infinite;
+    background-color: $textColor;
+    //border: 1px solid $textColor;
+    box-shadow: 30px 0 0 $primaryColor;
+    margin-bottom: 10px;
+  }
+
+  &:after {
+    animation: ball2 1s infinite;
+    background-color: $textColor;
+    box-shadow: 30px 0 0 $primaryColor;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(0.8)
+  }
+  50% {
+    transform: rotate(360deg) scale(1.2)
+  }
+  100% {
+    transform: rotate(720deg) scale(0.8)
+  }
+}
+
+@keyframes ball1 {
+  0% {
+    box-shadow: 30px 0 0 $textColor;
+  }
+  50% {
+    box-shadow: 0 0 0 $textColor;
+    margin-bottom: 0;
+    transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 $textColor;
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes ball2 {
+  0% {
+    box-shadow: 30px 0 0 $textColor;
+  }
+  50% {
+    box-shadow: 0 0 0 $textColor;
+    margin-top: -20px;
+    transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 $textColor;
+    margin-top: 0;
+  }
+}

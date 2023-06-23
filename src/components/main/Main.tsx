@@ -7,11 +7,18 @@ import {Particle} from "../../common/components/particle/Particle";
 import {Slide, Fade} from "react-awesome-reveal"
 import ReactTypingEffect from "react-typing-effect";
 import {Tilt} from 'react-tilt'
+import {api} from "../../api/api";
+import {toast} from "react-toastify";
 
 export const Main = () => {
 
     const photo = {
         backgroundImage: `url(${mainPhoto})`
+    }
+    const downloadMyCV = () => {
+        api.downloadCV()
+            .then(() => toast.success('success'))
+            .catch((e) => toast.error(e.message))
     }
 
     return (
@@ -28,8 +35,11 @@ export const Main = () => {
                             speed={70}
                             eraseSpeed={100}/>
                         <div className={s.navigation}>
-                            <SuperButton name={'View My Works'}
-                                         variant={'primary'} href={'#projects'}/>
+                            <SuperButton name={'Get My CV'}
+                                         icon={'save'}
+                                         callBack={downloadMyCV}
+                                         // href={'https://gmail-nodejs-beige.vercel.app/download'}
+                                         variant={'primary'}/>
                             <SuperButton name={'Contact Me'}
                                          variant={'link'}
                                          icon={'arrowCircleDown'} href={'#contact'}/>

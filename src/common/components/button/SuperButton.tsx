@@ -10,11 +10,13 @@ import instagram from './../../../assets/image/btnIcon/btnMessage/instagram.svg'
 import location from './../../../assets/image/btnIcon/btnMessage/location.svg'
 import phone from './../../../assets/image/btnIcon/btnMessage/phone.svg'
 import linkedin from './../../../assets/image/btnIcon/btnMessage/linkedin.svg'
+import save from './../../../assets/image/btnIcon/save.svg'
 
 type SuperButtonPropsType = {
     name?: string
     variant: 'primary' | 'basic' | 'secondary' | 'link' | 'icon'
     href?: string
+    callBack?: () => void
     icon?:
         'arrowCircleDown'
         | 'arrowDown'
@@ -26,6 +28,7 @@ type SuperButtonPropsType = {
         | 'location'
         | 'phone'
         | 'linkedin'
+        | 'save'
 }
 
 export const SuperButton: React.FC<SuperButtonPropsType> = (
@@ -34,6 +37,7 @@ export const SuperButton: React.FC<SuperButtonPropsType> = (
         variant,
         icon,
         href,
+        callBack
     }
 ) => {
 
@@ -60,6 +64,7 @@ export const SuperButton: React.FC<SuperButtonPropsType> = (
         arrowCircleDown,
         arrowDown,
         arrowLeft,
+        save,
         telegram,
         github,
         gmail,
@@ -70,7 +75,7 @@ export const SuperButton: React.FC<SuperButtonPropsType> = (
     }
     const iconForButton = {backgroundImage: `url(${icon && allIcons[icon]})`}
 
-    return <a href={href} className={finalClassName}>
+    return <a href={href} className={finalClassName} onClick={callBack}>
         {name}
         {variant === 'icon'
             ? <span className={s.btnIcon} style={iconForButton}/>
